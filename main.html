@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>La ruleta del Mapache</title>
+    <style>
+        .titulo {
+            border: 2px solid black;
+            height: 3em;
+            width: 33%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .colores {
+            border: 2px solid black;
+            height: 250px;
+            width: 250px;
+            position: absolute;
+            left: 33%;
+            top: 35%;
+            transform: translateY(-50%);
+        }
+
+        .numeros {
+            border: 2px solid black;
+            height: 250px;
+            width: 250px;
+            position: absolute;
+            right: 33%;
+            top: 35%;
+            transform: translateY(-50%);
+            font-size: 80px;
+            text-align: center;
+            line-height: 250px;
+        }
+
+        .mensaje,
+        .mensaje2 {
+            border: 2px solid black;
+            width: 250px;
+            height: 20px;
+            margin: 0 auto;
+            text-align: center;
+            position: absolute;
+            top: 60%;
+            left: 43%;
+        }
+
+        .mensaje2 {
+            height: 100px;
+            top: 65%;
+        }
+
+        .boton {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .boton button {
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="titulo">
+        <p>La Ruleta del Mapache</p>
+    </div>
+    <div class="colores"></div>
+    <div class="numeros"></div>
+    <div class="mensaje"></div>
+    <div class="mensaje2"></div>
+    <div class="boton">
+        <button>¡JUGAR!</button>
+    </div>
+
+
+    <script>
+        /*Rojo,Verde,Azul,Amarillo,Gris,Marrón,Morado,Negro  */
+        const colores = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#808080', '#340d00', '#a500ff', '#000000'];
+        const btn = document.querySelector('button');
+        const coloresDiv = document.querySelector('.colores');
+        const numerosDiv = document.querySelector('.numeros');
+        const mensajeDiv = document.querySelector('.mensaje');
+        const mensaje2Div = document.querySelector('.mensaje2');
+
+        btn.addEventListener('click', () => {
+            const randomColor = colores[Math.floor(Math.random() * colores.length)];
+            const randomNum = Math.floor(Math.random() * 6) + 1;
+            coloresDiv.style.backgroundColor = randomColor;
+            numerosDiv.textContent = randomNum;
+
+            if (randomColor === '#FF0000') {/*Rojo*/
+                mensajeDiv.textContent = "¡Muerde!";
+            } else if (randomColor === '#00FF00') {/*Verde*/
+                mensajeDiv.textContent = "¡Caricia!";
+            } else if (randomColor === '#0000FF') {/*Azul*/
+                mensajeDiv.textContent = "¡Besa!";
+            } else if (randomColor === '#FFFF00') {/*Amarillo*/
+                mensajeDiv.textContent = "¡Has ganado una camiseta!";
+            } else if (randomColor === '#808080') {/*Gris*/
+                mensajeDiv.textContent = "¡Has ganado una camiseta!";
+            } else if (randomColor === '#340d00') {/*Marrón*/
+                mensajeDiv.textContent = "¡Has ganado una camiseta!";
+            } else if (randomColor === '#a500ff') {/*Morado*/
+                mensajeDiv.textContent = "¡Has ganado una camiseta!";
+            }
+            else {
+                mensajeDiv.textContent = "¡Inténtalo de nuevo!";/*Negro*/
+            }
+
+            if (randomColor === '#FFA500' && randomNum === 6) {
+                mensaje2Div.textContent = "¡Has ganado un pase VIP!";
+            } else if (randomColor === '#00FF00' && randomNum === 2) {
+                mensaje2Div.textContent = "¡Has ganado una entrada gratis!";
+            } else {
+                mensaje2Div.textContent = "¡Sigue intentándolo!";
+            }
+        });
+    </script>
+
+</body>
+
+</html>
