@@ -5,6 +5,46 @@
     <meta charset="UTF-8">
     <title>La ruleta del Mapache</title>
     <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        #lista-participantes-div {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #lista-participantes-div h1 {
+            top: 15px;
+            margin-top: 0;
+        }
+
+        #lista-participantes-div form {
+            margin-top: 1rem;
+        }
+
+        #lista-participantes-div .input-wrapper {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        #lista-participantes-div input[type="text"] {
+            flex: 1;
+        }
+
+        #lista-participantes-div button {
+            min-width: 7.5rem;
+        }
+
+        #lista-participantes-div *:not(button, input) {
+            color: white;
+        }
+
+
         .titulo {
             border: 2px solid black;
             height: 3em;
@@ -18,7 +58,7 @@
             position: fixed;
             top: 0;
             bottom: 0;
-            width: 20%;
+            width: 23%;
             background-color: black;
         }
 
@@ -28,6 +68,12 @@
 
         .bandaDrcha {
             right: 0;
+        }
+
+        .banderaNegra.bandaDrcha {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
 
@@ -88,17 +134,90 @@
 </head>
 
 <body>
-    <div class="bandaNegra bandaIzda"></div>
-    <div class="bandaNegra bandaDrcha"></div>
-    <div class="titulo">
-        <p>La Ruleta del Mapache</p>
+    <div class="bandaNegra bandaIzda">
+        <div id="lista-participantes-div">
+            <h1 style="margin-top: 15px;">Lista de participantes</h1>
+            <ul id="lista-participantes">
+                <!-- La lista se mostrará aquí -->
+            </ul>
+            <form>
+                <label for="nombre">Introduce el nombre:</label>
+                <div class="input-wrapper">
+                    <input type="text" id="nombre" name="nombre">
+                    <button type="button" id="agregar" style="background-color: white;">Agregar</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="colores"></div>
-    <div class="numeros"></div>
-    <div class="mensaje"></div>
-    <div class="mensaje2"></div>
+
+    <ul id="lista-participantes">
+        <!-- La lista se mostrará aquí -->
+    </ul>
+    <script>
+        const participantes = [];
+
+        const form = document.querySelector('form');
+        const input = document.querySelector('#nombre');
+        const lista = document.querySelector('#lista-participantes');
+        const botonAgregar = document.querySelector('#agregar');
+
+        botonAgregar.addEventListener('click', () => {
+            // Añadir el nombre a la lista
+            const nombre = input.value;
+            participantes.push(nombre);
+            const itemLista = document.createElement('li');
+            itemLista.textContent = nombre;
+            lista.appendChild(itemLista);
+
+            // Vaciar el campo de texto
+            input.value = '';
+        });
+    </script>
+    </div>
+
+    </div>
+    <div class="bandaNegra bandaDrcha" style="margin: 0 auto;">
+        <div style="text-align: center;">
+            <div>
+                <h1 style="color: white;">Es el turno de:</h1>
+                <input type="text" id="recorrer" readonly>
+            </div>
+            <div>
+                <h1 style="color: white;">Hazle la prueba a:</h1>
+                <input type="text" id="aleatorio" readonly>
+            </div>
+            <button type="button" onclick="mostrarNombres()" style="margin-top: 15px;">!Dale!</button>
+        </div>
+        <script>
+            const participantes2 = [];
+
+            const jugadores = participantes;
+            let index = 0;
+
+            function mostrarNombres() {
+                if (index >= jugadores.length) {
+                    index = 0;
+                }
+                const nombre = jugadores[index];
+                document.querySelector('#recorrer').value = nombre;
+                const indiceAleatorio = Math.floor(Math.random() * jugadores.length);
+                const nombreAleatorio = jugadores[indiceAleatorio];
+                document.querySelector('#aleatorio').value = nombreAleatorio;
+                index++;
+            }
+        </script>
+    </div>
+
+    <div class="titulo" style="background-color: white; font-size: 1.5em;">
+        <p><strong>La Ruleta del Mapache</strong></p>
+    </div>
+    <div class="colores" style="background-color: white;"></div>
+    <div class="numeros" style="background-color: white;"></div>
+    <div class="mensaje" style="background-color: white;"></div>
+    <div class="mensaje2" style="background-color: white;"></div>
     <div class="boton">
-        <button>¡JUGAR!</button>
+        <button id="jugar">¡JUGAR!</button>
+
     </div>
 
 
@@ -106,7 +225,7 @@
     <script>
         /*Rojo,Verde,Azul,Amarillo,Gris,Marrón,Morado,Negro  */
         const colores = ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#808080', '#340d00', '#a500ff', '#000000'];
-        const btn = document.querySelector('button');
+        const btn = document.querySelector('#jugar');
         const coloresDiv = document.querySelector('.colores');
         const numerosDiv = document.querySelector('.numeros');
         const mensajeDiv = document.querySelector('.mensaje');
