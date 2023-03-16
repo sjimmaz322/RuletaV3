@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lista de participantes</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      button {
+        margin-left: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista de participantes</h1>
+    <form>
+      <label for="nombre">Introduce el nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+      <button type="button" id="agregar">Agregar</button>
+    </form>
+    <ul id="lista-participantes">
+      <!-- La lista se mostrará aquí -->
+    </ul>
+    <script>
+      const participantes = [];
+
+      const form = document.querySelector('form');
+      const input = document.querySelector('#nombre');
+      const lista = document.querySelector('#lista-participantes');
+      const botonAgregar = document.querySelector('#agregar');
+
+      botonAgregar.addEventListener('click', () => {
+        // Añadir el nombre a la lista
+        const nombre = input.value;
+        participantes.push(nombre);
+        const itemLista = document.createElement('li');
+        itemLista.textContent = nombre;
+        lista.appendChild(itemLista);
+
+        // Vaciar el campo de texto
+        input.value = '';
+      });
+    </script>
+  </body>
+</html>
