@@ -16,7 +16,6 @@
             <h1 style="margin-top: 15px;">Lista de participantes</h1>
 
             <form>
-                <label for="nombre">Introduce el nombre:</label>
                 <div class="input-wrapper">
                     <input type="text" id="nombre" name="nombre">
                     <button type="button" id="agregar" style="background-color: white;">Agregar</button>
@@ -40,17 +39,11 @@
                 <h1 style=" color: white;margin-bottom: 25px;">Hazle la prueba a:</h1>
                 <input type="text" id="aleatorio" readonly>
             </div>
-            <button type="button" onclick="mostrarNombres()" style="padding: 5px;
-                border-radius: 50%;
-                background-color: #2287ed;
-                color: black;
-                font-size: 25px;
-                font-weight: bold;
-                cursor: pointer;;">!Dale!</button>
 
-            <div style="margin-bottom: 25px;">
-                <h1 style=" color: white;margin-bottom: 25px;margin-top: 25px;">Y ha salido:</h1>
-                <textarea id="prueba" name="prueba" rows="10" cols="40" readonly></textarea>
+            <div style="margin-bottom: 25px;
+            align-items: center;">
+                <h1 style=" color: white;margin-bottom: 25px;margin-top: 25px;">La prueba es:</h1>
+                <textarea id="prueba" name="prueba" rows="4" cols="30" readonly></textarea>
             </div>
         </div>
     </div>
@@ -136,7 +129,7 @@
 
             </div>
             <div class="button-container">
-                <button type="button" id="spin">Girar</button>
+                <button type="button" id="spin" onclick="mostrarNombres()">Girar</button>
                 <button type="button" id="reset">Resetea</button>
             </div>
         </section>

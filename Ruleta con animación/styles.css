@@ -38,6 +38,12 @@ body {
     cursor: pointer;
 }
 
+#nombre {
+    text-align: center;
+    font-size: 1.5em;
+    width: 200px;
+}
+
 #aleatorio {
     height: 30px;
     text-align: center;
@@ -53,10 +59,10 @@ body {
 #prueba {
     font-size: 15px;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-weight: bold;
 }
 
@@ -159,7 +165,8 @@ main .roulette-container #selector {
 }
 
 #roulette .roulette-section:first-child .roulette-section-container {
-    background: blue;
+
+    background: red;
 }
 
 #roulette .roulette-section:nth-child(2) .roulette-section-container {
@@ -167,7 +174,7 @@ main .roulette-container #selector {
 }
 
 #roulette .roulette-section:nth-child(3) .roulette-section-container {
-    background: red;
+    background: rgb(0, 153, 255);
 }
 
 #roulette .roulette-section:nth-child(4) .roulette-section-container {
@@ -175,7 +182,8 @@ main .roulette-container #selector {
 }
 
 #roulette .roulette-section:nth-child(5) .roulette-section-container {
-    background: silver;
+
+    background: brown;
 }
 
 #roulette .roulette-section:nth-child(6) .roulette-section-container {
@@ -195,19 +203,20 @@ main .roulette-container #selector {
 }
 
 #roulette .roulette-section:nth-child(9) .roulette-section-container {
-    background: purple;
-}
-
-#roulette .roulette-section:nth-child(10) .roulette-section-container {
-    background: goldenrod;
-}
-
-#roulette .roulette-section:nth-child(11) .roulette-section-container {
     background: whitesmoke;
 }
 
+#roulette .roulette-section:nth-child(10) .roulette-section-container {
+    background: limegreen;
+}
+
+#roulette .roulette-section:nth-child(11) .roulette-section-container {
+
+    background: purple;
+}
+
 #roulette .roulette-section:nth-child(12) .roulette-section-container {
-    background: brown;
+    background: silver;
 }
 
 #roulette .roulette-section:first-child {

@@ -19,6 +19,8 @@ const sound = new Audio("buttonSound.wav");
 
 spinButton.addEventListener("click", () => {
     let result;
+    let prueba;
+
     const spins = getRandomNumber(minSpins, maxSpins);
     const degrees = getRandomNumber(minDegrees, maxDegrees);
 
@@ -56,6 +58,31 @@ spinButton.addEventListener("click", () => {
         result = 1;
     }
 
+    const numPrueba = getRandomNumber(1, 10);
+
+    if (result == 1 && numPrueba == 1) {
+        prueba = "beso en los labios";
+    } else if (result == 1 && numPrueba == 2) {
+        prueba = "beso en la mejilla"
+    } else if (result == 1 && numPrueba == 3) {
+        prueba = "beso en el cuello"
+    } else if (result == 1 && numPrueba == 4) {
+        prueba = "beso en el pecho"
+    } else if (result == 1 && numPrueba == 5) {
+        prueba = "beso en la barriga"
+    } else if (result == 1 && numPrueba == 6) {
+        prueba = "beso en la frente"
+    } else if (result == 1 && numPrueba == 7) {
+        prueba = "beso en el interior del muslo"
+    } else if (result == 1 && numPrueba == 8) {
+        prueba = "beso en las nalgas"
+    } else if (result == 1 && numPrueba == 9) {
+        prueba = "beso en la mano"
+    } else if (result == 1 && numPrueba == 10) {
+        prueba = "beso donde quieras"
+    } else {
+        prueba = "texto de ejemplo"
+    }
 
 
     sound.play();
@@ -67,7 +94,7 @@ spinButton.addEventListener("click", () => {
 
     sound.onended = () => {
         sound.remove();
-        document.querySelector('#prueba').value = result;
+        document.querySelector('#prueba').value = prueba.toUpperCase();
     };
 
 });
