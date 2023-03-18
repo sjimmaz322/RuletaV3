@@ -87,8 +87,8 @@ main .roulette-container #selector {
 
 #roulette {
     background: #fff;
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     font-size: 14px;
     overflow: hidden;
     border-radius: 100%;
