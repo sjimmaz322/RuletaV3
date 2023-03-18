@@ -28,6 +28,38 @@ body {
     cursor: pointer;
 }
 
+#agregar {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #2287ed;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#aleatorio {
+    height: 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#recorrer {
+    height: 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#prueba {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
 .button-container button:hover {
     border: none;
     outline: none;

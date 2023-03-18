@@ -2,11 +2,13 @@ const roulette = document.querySelector("#roulette");
 const spinButton = document.querySelector("#spin")
 const resetButton = document.querySelector("#reset")
 
-const maxSpins = 10;
-const minSpins = 1;
+const maxSpins = 7;
+const minSpins = 3;
 
 const maxDegrees = 360;
 const minDegrees = 15;
+
+
 
 const getRandomNumber = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
@@ -16,7 +18,7 @@ const getRandomNumber = (min, max) => {
 const sound = new Audio("buttonSound.wav");
 
 spinButton.addEventListener("click", () => {
-
+    let result;
     const spins = getRandomNumber(minSpins, maxSpins);
     const degrees = getRandomNumber(minDegrees, maxDegrees);
 
@@ -28,6 +30,33 @@ spinButton.addEventListener("click", () => {
     roulette.style.transform = `rotate(${spin}deg)`;
     roulette.style.transitionDuration = `${animationTime}s`;
 
+    if (degrees >= 0 && degrees < 30) {
+        result = 12;
+    } else if (degrees >= 30 && degrees < 60) {
+        result = 11;
+    } else if (degrees >= 60 && degrees < 90) {
+        result = 10;
+    } else if (degrees >= 90 && degrees < 120) {
+        result = 9;
+    } else if (degrees >= 120 && degrees < 150) {
+        result = 8;
+    } else if (degrees >= 150 && degrees < 180) {
+        result = 7;
+    } else if (degrees >= 180 && degrees < 210) {
+        result = 6;
+    } else if (degrees >= 210 && degrees < 240) {
+        result = 5;
+    } else if (degrees >= 240 && degrees < 270) {
+        result = 4;
+    } else if (degrees >= 270 && degrees < 300) {
+        result = 3;
+    } else if (degrees >= 300 && degrees < 330) {
+        result = 2;
+    } else {
+        result = 1;
+    }
+
+
 
     sound.play();
 
@@ -38,9 +67,10 @@ spinButton.addEventListener("click", () => {
 
     sound.onended = () => {
         sound.remove();
+        document.querySelector('#prueba').value = result;
     };
-});
 
+});
 
 
 
@@ -63,6 +93,7 @@ botonAgregar.addEventListener('click', () => {
     const nombre = input.value;
     participantes.push(nombre);
     const itemLista = document.createElement('li');
+    itemLista.style.fontSize = "25px";
     itemLista.textContent = nombre;
     lista.appendChild(itemLista);
 
@@ -86,3 +117,5 @@ function mostrarNombres() {
     document.querySelector('#aleatorio').value = nombreAleatorio;
     index++;
 }
+
+
