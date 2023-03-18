@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1b1b1b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.button-container button {
+    border: none;
+    outline: none;
+    padding: 15px 100px;
+    border-radius: 50%;
+    background: #2287ed;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    border: none;
+    outline: none;
+    padding: 15px 100px;
+    border-radius: 50%;
+    background: #005bb6;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-container button:active {
+    border: none;
+    outline: none;
+    padding: 15px 100px;
+    border-radius: 50%;
+    background: #5822ed;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+html,
+body,
+main {
+    height: 100%;
+}
+
+body main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .roulette-container {
+    position: relative;
+}
+
+main .roulette-container #selector {
+    position: absolute;
+    top: -25px;
+    display: inline-block;
+    width: 0%;
+    width: 0%;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #f2f2f2;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+
+}
+
+#roulette {
+    background: #fff;
+    width: 400px;
+    height: 400px;
+    font-size: 14px;
+    overflow: hidden;
+    border-radius: 100%;
+    position: relative;
+    transition-property: transform;
+    transform: rotate(0deg);
+}
+
+#roulette .roulette-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+    overflow: hidden;
+}
+
+#roulette .roulette-section .roulette-section-container {
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    text-align: center;
+    padding-top: 50px;
+    transform: skewY(60deg) rotate(15deg);
+}
+
+#roulette .roulette-section .roulette-section-container p {
+    margin-top: 30px;
+    transform: rotate(270deg);
+}
+
+.button-container button#reset {
+    display: none;
+}
+
+#roulette .roulette-section:first-child .roulette-section-container {
+    background: blue;
+}
+
+#roulette .roulette-section:nth-child(2) .roulette-section-container {
+    background: green;
+}
+
+#roulette .roulette-section:nth-child(3) .roulette-section-container {
+    background: red;
+}
+
+#roulette .roulette-section:nth-child(4) .roulette-section-container {
+    background: yellow;
+}
+
+#roulette .roulette-section:nth-child(5) .roulette-section-container {
+    background: silver;
+}
+
+#roulette .roulette-section:nth-child(6) .roulette-section-container {
+    background: violet;
+}
+
+#roulette .roulette-section:nth-child(7) .roulette-section-container {
+    background: black;
+}
+
+#roulette .roulette-section:nth-child(7) .roulette-section-container p {
+    color: white;
+}
+
+#roulette .roulette-section:nth-child(8) .roulette-section-container {
+    background: orange;
+}
+
+#roulette .roulette-section:nth-child(9) .roulette-section-container {
+    background: purple;
+}
+
+#roulette .roulette-section:nth-child(10) .roulette-section-container {
+    background: goldenrod;
+}
+
+#roulette .roulette-section:nth-child(11) .roulette-section-container {
+    background: whitesmoke;
+}
+
+#roulette .roulette-section:nth-child(12) .roulette-section-container {
+    background: brown;
+}
+
+#roulette .roulette-section:first-child {
+    transform: rotate(0deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(2) {
+    transform: rotate(30deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(3) {
+    transform: rotate(60deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(4) {
+    transform: rotate(90deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(5) {
+    transform: rotate(120deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(6) {
+    transform: rotate(150deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(7) {
+    transform: rotate(180deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(8) {
+    transform: rotate(210deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(9) {
+    transform: rotate(240deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(10) {
+    transform: rotate(270deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(11) {
+    transform: rotate(300deg) skewY(-60deg);
+}
+
+#roulette .roulette-section:nth-child(12) {
+    transform: rotate(330deg) skewY(-60deg);
+}
