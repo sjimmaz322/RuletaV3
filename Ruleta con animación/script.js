@@ -250,8 +250,11 @@ spinButton.addEventListener("click", () => {
     } else if (result == 9 && numPrueba == 10) {
         prueba = "Hay que lamer: La carita."
         // LIMA -
+
         // MORADO - 
+
         // GRIS -
+        
     } else {
         prueba = "Undefined at the moment"
     }
