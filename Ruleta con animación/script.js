@@ -207,6 +207,27 @@ spinButton.addEventListener("click", () => {
         prueba = "Se va: Lo que quieras quitarte."
     } else if (result == 7 && numPrueba == 10) {
         prueba = "Se va: Todo de cintura para abajo."
+        // NARANJA - AZOTAR
+    } else if (result == 8 && numPrueba == 1) {
+        prueba = "Da un azote en la cara.";
+    } else if (result == 8 && numPrueba == 2) {
+        prueba = "Da un azote en la espalda."
+    } else if (result == 8 && numPrueba == 3) {
+        prueba = "Da un azote en las nalgas."
+    } else if (result == 8 && numPrueba == 4) {
+        prueba = "Da un azote en el pecho."
+    } else if (result == 8 && numPrueba == 5) {
+        prueba = "Da un azote en muslo."
+    } else if (result == 8 && numPrueba == 6) {
+        prueba = "Da un azote donde quieras darlo."
+    } else if (result == 8 && numPrueba == 7) {
+        prueba = "Da un azote en ningún lado, se haga la paz."
+    } else if (result == 8 && numPrueba == 8) {
+        prueba = "Da un azote en la barriga."
+    } else if (result == 8 && numPrueba == 9) {
+        prueba = "Da un azote en el cuello."
+    } else if (result == 8 && numPrueba == 10) {
+        prueba = "Da un azote en las manos."
     } else {
         prueba = "Undefined at the moment"
     }

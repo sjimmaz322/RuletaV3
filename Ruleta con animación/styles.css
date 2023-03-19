@@ -163,6 +163,7 @@ main .roulette-container #selector {
     text-align: center;
     padding-top: 50px;
     transform: skewY(60deg) rotate(15deg);
+    font-weight: bold;
 }
 
 #roulette .roulette-section .roulette-section-container p {
