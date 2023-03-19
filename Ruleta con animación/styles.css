@@ -38,6 +38,16 @@ body {
     cursor: pointer;
 }
 
+#normas {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #2287ed;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 #nombre {
     text-align: center;
     font-size: 1.5em;
