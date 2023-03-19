@@ -218,7 +218,7 @@ main .roulette-container #selector {
 }
 
 #roulette .roulette-section:nth-child(10) .roulette-section-container {
-    background: limegreen;
+    background: greenyellow;
 }
 
 #roulette .roulette-section:nth-child(11) .roulette-section-container {

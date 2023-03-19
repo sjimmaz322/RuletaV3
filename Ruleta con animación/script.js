@@ -228,6 +228,30 @@ spinButton.addEventListener("click", () => {
         prueba = "Da un azote en el cuello."
     } else if (result == 8 && numPrueba == 10) {
         prueba = "Da un azote en las manos."
+        // BLANCO - LAMER
+    } else if (result == 9 && numPrueba == 1) {
+        prueba = "Hay que lamer: El cuello.";
+    } else if (result == 9 && numPrueba == 2) {
+        prueba = "Hay que lamer: La axila."
+    } else if (result == 9 && numPrueba == 3) {
+        prueba = "Hay que lamer: Un pie."
+    } else if (result == 9 && numPrueba == 4) {
+        prueba = "Hay que lamer: La barriga."
+    } else if (result == 9 && numPrueba == 5) {
+        prueba = "Hay que lamer: El pecho."
+    } else if (result == 9 && numPrueba == 6) {
+        prueba = "Hay que lamer: Un pezón."
+    } else if (result == 9 && numPrueba == 7) {
+        prueba = "Hay que lamer lo que más apetezca."
+    } else if (result == 9 && numPrueba == 8) {
+        prueba = "No hay nada que lamer."
+    } else if (result == 9 && numPrueba == 9) {
+        prueba = "Hay que lamer: Una nalga."
+    } else if (result == 9 && numPrueba == 10) {
+        prueba = "Hay que lamer: La carita."
+        // LIMA -
+        // MORADO - 
+        // GRIS -
     } else {
         prueba = "Undefined at the moment"
     }
