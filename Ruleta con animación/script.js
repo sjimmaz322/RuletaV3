@@ -249,14 +249,69 @@ spinButton.addEventListener("click", () => {
         prueba = "Hay que lamer: Una nalga."
     } else if (result == 9 && numPrueba == 10) {
         prueba = "Hay que lamer: La carita."
-        // LIMA -
-
-        // MORADO - 
-
-        // GRIS -
-        
+        // LIMA - RESTRIEGA
+    } else if (result == 10 && numPrueba == 1) {
+        prueba = "Hay que restregarse las caras.";
+    } else if (result == 10 && numPrueba == 2) {
+        prueba = "Hay que restregarse el pecho."
+    } else if (result == 10 && numPrueba == 3) {
+        prueba = "Hay que restregarse las nalgas."
+    } else if (result == 10 && numPrueba == 4) {
+        prueba = "Hay que restregarse las barrigas."
+    } else if (result == 10 && numPrueba == 5) {
+        prueba = "Hay que restregarse las entrepiernas."
+    } else if (result == 10 && numPrueba == 6) {
+        prueba = "No hay que restregarse nada."
+    } else if (result == 10 && numPrueba == 7) {
+        prueba = "Hay que restregarse lo que se tercie."
+    } else if (result == 10 && numPrueba == 8) {
+        prueba = "Hay que restregarse las manos."
+    } else if (result == 10 && numPrueba == 9) {
+        prueba = "Hay que restregarse los pies."
+    } else if (result == 10 && numPrueba == 10) {
+        prueba = "Hay que restregarse los muslos."
+        // MORADO - PELLIZCAR
+    } else if (result == 11 && numPrueba == 1) {
+        prueba = "Toca dar pellizco en la mejilla.";
+    } else if (result == 11 && numPrueba == 2) {
+        prueba = "Toca dar pellizco en la barriga."
+    } else if (result == 11 && numPrueba == 3) {
+        prueba = "Toca dar pellizco en las nalgas."
+    } else if (result == 11 && numPrueba == 4) {
+        prueba = "Toca dar pellizco en el muslo."
+    } else if (result == 11 && numPrueba == 5) {
+        prueba = "Toca dar pellizco en el pecho."
+    } else if (result == 11 && numPrueba == 6) {
+        prueba = "Toca dar pellizco en un pezón."
+    } else if (result == 11 && numPrueba == 7) {
+        prueba = "Toca dar pellizco en la entrepierna."
+    } else if (result == 11 && numPrueba == 8) {
+        prueba = "Toca dar pellizco en ningún sitio, que duele."
+    } else if (result == 11 && numPrueba == 9) {
+        prueba = "Toca dar pellizco en el sitio que quieras."
+    } else if (result == 11 && numPrueba == 10) {
+        prueba = "Toca dar pellizco en un brazo."
+        // GRIS - DESNUDAR
+    } else if (result == 12 && numPrueba == 1) {
+        prueba = "Quítale sensualmente a otro jugador: Su sudadera/chaqueta.";
+    } else if (result == 12 && numPrueba == 2) {
+        prueba = "Quítale sensualmente a otro jugador: Su camiseta/camisa."
+    } else if (result == 12 && numPrueba == 3) {
+        prueba = "Quítale sensualmente a otro jugador: Su pantalón/falda."
+    } else if (result == 12 && numPrueba == 4) {
+        prueba = "Quítale sensualmente a otro jugador: Sus zapatillas."
+    } else if (result == 12 && numPrueba == 5) {
+        prueba = "Quítale sensualmente a otro jugador: Sus calcetines."
+    } else if (result == 12 && numPrueba == 6) {
+        prueba = "Quítale sensualmente a otro jugador: Todo de cintura para arriba."
+    } else if (result == 12 && numPrueba == 7) {
+        prueba = "Quítale sensualmente a otro jugador: Todo"
+    } else if (result == 12 && numPrueba == 8) {
+        prueba = "Quítale sensualmente a otro jugador: Nada, todo se queda."
+    } else if (result == 12 && numPrueba == 9) {
+        prueba = "Quítale sensualmente a otro jugador: Lo que quieras quitarte."
     } else {
-        prueba = "Undefined at the moment"
+        prueba = "Quítale sensualmente a otro jugador: Todo de cintura para abajo"
     }
 
 
